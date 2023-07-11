@@ -3,6 +3,8 @@
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
   --main-duration: 300ms;
+  --padding-section: 100px;
+  --paragraph-color: #777;
 }
 /* End Global Variables */
 /* Start Global Rules */
@@ -300,7 +302,7 @@ header .mega-menu ul.links li:last-of-type a {
   }
   .landing .container .text P {
     font-size: 23px;
-    color: #777;
+    color: var(--paragraph-color, #777);
     line-height: 1.6;
     max-width: 500px;
   }
@@ -329,6 +331,52 @@ header .mega-menu ul.links li:last-of-type a {
     color: var(--main-color-alt);
   }
 /* End Landing */
+/* Start Articles  */
+.articles {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+.articles .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.articles .content .article-box {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 10%);
+  transition-duration: var(--main-duration);
+}
+.articles .content .article-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 20%);
+}
+.articles .content .article-box .image img {
+  max-width: 100%;
+}
+.articles .content .article-box .text {
+  padding: 20px;
+  border-bottom: 1px solid #e9e6e6;
+}
+.articles .content .article-box .text h3 {
+  margin-bottom: 10px;
+}
+.articles .content .article-box .text p {
+  color: var(--paragraph-color);
+  line-height: 1.6;
+}
+.articles .content .article-box a {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.articles .content .article-box:hover i {
+  animation: arrow-move-right 500ms linear infinite;
+}
+/* End Articles  */
 /* Start Animation */
 @keyframes up-and-down {
   from {
@@ -394,6 +442,14 @@ header .mega-menu ul.links li:last-of-type a {
   border-radius: 0;
   width: 100%;
   height: 100%;
+  }
+}
+@keyframes arrow-move-right {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(10px);
   }
 }
 /* End Animation */
