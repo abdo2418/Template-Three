@@ -616,6 +616,81 @@ header .mega-menu ul.links li:last-of-type a {
   color: #ffc107;
 }
 /* End Testimonials */
+/* Stat Team Members */
+.team-members {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.team-members .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.team-members .container .box {
+  background-color: #f3f3f3;
+  margin-left: 60px;
+  border-radius: 10px;
+  position: relative;
+}
+.team-members .container .box::before {
+  content: "";
+  border-radius: inherit;
+  background-color: #e4e4e4;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition-duration: var(--main-duration);
+}
+.team-members .container .box:hover::before {
+  width: 100%;
+}
+.team-members .container .box .img-links-holder {
+  display: flex;
+  margin-top: 60px;
+  transform: translateX(-60px);
+  width: 360px;
+}
+@media (max-width: 767px) {
+  .team-members .container .box .img-links-holder {
+    width: 350px;
+  }
+}
+.team-members .box img {
+  max-width: calc(100% - 60px);
+  border-radius: 10px;
+  transition-duration: var(--main-duration);
+}
+.team-members .box:hover img {
+  filter: grayscale(100%);
+}
+.team-members .box ul.links {
+  margin: auto;
+}
+.team-members .box ul.links li a {
+  display: block;
+  margin-top: 30px;
+  color: #777;
+  transition-duration: var(--main-duration);
+}
+.team-members .box ul.links li:hover a {
+  color: var(--main-color);
+}
+.team-members .box .text {
+  position: relative;
+  padding: 20px;
+}
+.team-members .box .text h3 {
+  color: var(--main-color);
+  font-size: 22px;
+  margin-bottom: 10px;
+  transition-duration: var(--main-duration);
+}
+.team-members .box:hover h3 {
+  color: #777;
+}
+/* End Team Members */
 /* Start Animation */
 @keyframes up-and-down {
   from {
