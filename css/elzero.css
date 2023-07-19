@@ -773,6 +773,51 @@ header .mega-menu ul.links li:last-of-type a {
   box-shadow: 50px 0 0 0 #d5d5d5;
 }
 /* End Services */
+/* Start Our Skills  */
+.our-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px)  {
+  .our-skills .container .img-holder img {
+    display: none;
+  }
+}
+.our-skills .container .skills {
+  flex: 1;
+}
+.our-skills .container .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-skills .container .skill:not(:first-child) h3 {
+  margin-top: 15px;
+}
+.our-skills .container .skill h3 span {
+  display: block;
+  padding: 3px 5px;
+  background-color: white;
+  font-size: 12px;
+  color: var(--main-color);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.our-skills .container .skill .bar {
+  background-color: #eee;
+  margin-top: 15px;
+  height: 30px;
+} 
+.our-skills .container .skill .bar span {
+  display: block;
+  height: 100%;
+  background-color: var(--main-color);
+}
+/* End Our Skills  */
 /* Start Animation */
 @keyframes up-and-down {
   from {
