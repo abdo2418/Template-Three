@@ -691,6 +691,88 @@ header .mega-menu ul.links li:last-of-type a {
   color: #777;
 }
 /* End Team Members */
+/* Start Services */
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.services .container .box {
+  background-color: white;
+  box-shadow: 0 12px 20px 0px rgb(0 0 0 / 13%), 0 2px 4px 0px rgb(0 0 0 / 12%);
+  counter-increment: ser;
+  position: relative;
+  transition-duration: var(--main-duration);
+}
+.services .container .box:hover {
+  transform: translateY(-10px);
+}
+.services .container .box::before {
+  content: '';
+  background-color: var(--main-color);
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition-duration: var(--main-duration);
+}
+.services .container .box:hover::before {
+  height: 3px;
+  width: 100%;
+}
+.services .container .box .title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.services .container .box .title i {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #d5d5d5;
+}
+.services .container .box .title h3 {
+  font-size: 25px;
+  color: var(--main-color);
+}
+.services .box .info {
+  text-align: right;
+  padding: 15px;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+.services .box .info a {
+  color: var(--main-color)
+}
+.services .box .info::after {
+  content:"0"counter(ser);
+  height: 100%;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+}
+.services .box .info::before {
+  content: '';
+  width: 30%;
+  height: 101%;
+  background-color: var(--main-color);
+  transform: skew(-30deg);
+  position: absolute;
+  top: 0;
+  left: -8%;
+  box-shadow: 50px 0 0 0 #d5d5d5;
+}
+/* End Services */
 /* Start Animation */
 @keyframes up-and-down {
   from {
