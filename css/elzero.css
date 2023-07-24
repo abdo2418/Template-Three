@@ -1023,6 +1023,131 @@ header .mega-menu ul.links li:last-of-type a {
   }
 }
 /* Start Events */
+/* Start Pricing */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+  background-image: url("../images/dots.png") , url("../images/dots.png");
+  background-repeat: no-repeat , no-repeat;
+  background-position: 100% 23% , left 78%;
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.pricing .container .pricing-box {
+  box-shadow: 0 12px 20px 0px rgb(0 0 0 / 13%), 0 2px 4px 0px rgb(0 0 0 / 12%);
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+.pricing .container .pricing-box::before,
+.pricing .container .pricing-box::after {
+  content: '';
+  background-color: #f6f6f6;
+  height: 50%;
+  width: 0;
+  z-index: -1;
+  transition-duration: var(--main-duration);
+  position: absolute;
+}
+.pricing .container .pricing-box::before {
+  top: 0;
+  left: 0;
+}
+.pricing .container .pricing-box::after {
+  bottom: 0;
+  right: 0;
+}
+.pricing .container .pricing-box:hover::before,
+.pricing .container .pricing-box:hover::after {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .pricing .container .pricing-box:nth-child(2) {
+    transform: translateY(-20px);
+  }
+}
+.pricing .container .pricing-box .head {
+  text-align: center;
+}
+.pricing .container .pricing-box .head h3 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+.pricing .container .pricing-box .head img { 
+  width: 80px;
+}
+.pricing .container .pricing-box span {
+  display: block;
+} 
+.pricing .container .pricing-box .head span:first-of-type {
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.pricing .container .pricing-box .head span:last-of-type {
+  color: var(--paragraph-color);
+  margin: 5px 0 20px;
+}
+.pricing .pricing-box ul.pricing-features li {
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+.pricing .pricing-box ul.pricing-features li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+.pricing .pricing-box a {
+  display: block;
+  margin: 30px auto 0;
+  width: fit-content;
+  padding: 15px 20px;
+  color: var(--main-color);
+  font-weight: bold;
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  transition-duration: var(--main-duration);
+}
+.pricing .pricing-box a:hover {
+  background-color: var(--main-color-alt);
+  border-color: var(--main-color-alt);
+  color: white;
+}
+.pricing .pricing-box span.blue-flag {
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 10px 35px;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 40px;
+}
+.pricing .pricing-box span.blue-flag::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 20px solid;
+  border-color: transparent transparent white  transparent;
+  transition: calc( var(--main-duration) + 200ms );
+}
+.pricing .pricing-box:hover span.blue-flag::after {
+  border-color: transparent transparent #f6f6f6  transparent;
+}
+/* End Pricing */
 /* Start Animation */
 @keyframes up-and-down {
   from {
