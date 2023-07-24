@@ -1148,6 +1148,64 @@ header .mega-menu ul.links li:last-of-type a {
   border-color: transparent transparent #f6f6f6  transparent;
 }
 /* End Pricing */
+/* Start Videos  */
+.videos {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.videos .holder {
+  display: flex;
+  justify-content: center;
+  background-color: var(--section-background);
+  border: 1px solid #DDD;
+}
+@media (max-width: 991px) {
+  .videos .holder {
+    flex-direction: column;
+  }
+}
+.videos .list  {
+  min-width: 300px;
+}
+.videos .list .name {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+.videos .list ul li {
+  transition-duration: var(--main-duration);
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+}
+.videos .list ul li:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+.videos .list ul li span {
+  display: block;
+  color: var(--paragraph-color);
+  margin-top: 10px;
+}
+.videos .preview {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #e2e2e2;
+}
+.videos .preview img {
+  max-width: 100%;
+}
+.videos .preview p {
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+}
+/* End Videos  */
 /* Start Animation */
 @keyframes up-and-down {
   from {
