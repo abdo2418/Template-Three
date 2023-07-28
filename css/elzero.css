@@ -1206,6 +1206,7 @@ header .mega-menu ul.links li:last-of-type a {
   margin-top: 10px;
 }
 /* End Videos  */
+/* Start Stats */
 .stats {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -1283,6 +1284,106 @@ header .mega-menu ul.links li:last-of-type a {
   font-size: 20px;
   font-style: italic;
 }
+/* End Stats */
+/* Start Discount */
+.discount {
+  display: flex;
+  height: 100vh;
+}
+@media (max-width: 991px) {
+  .discount {
+    flex-direction: column;
+  }
+}
+.discount .content {
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+}
+.discount .content h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+.discount .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  position: relative;
+  background-image: url(../images/discount-background1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: change-background 10s linear infinite;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+}
+.discount .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: hsla(207, 81%, 48%, 0.970);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.discount .image .content img {
+  max-width: 100%;
+  width: 300px;
+}
+.discount .image .content p {
+  line-height: 1.6;
+  margin: 25px auto;
+  font-size: 18px;
+  max-width: 500px;
+}
+.discount .form-holder {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.discount .form-holder .content {
+  text-align: center;
+  padding: 0 20px;
+}
+.discount .form-holder .content h2 {
+  margin-bottom: 25px;
+  word-spacing: -2px;
+}
+.discount .form-holder .content .input {
+  display: block;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  caret-color: var(--main-color);
+}
+.discount .form-holder .content textarea.input {
+  height: 200px;
+  resize: none;
+}
+.discount .form-holder .content .input:focus {
+  outline: none;
+}
+.discount .form-holder .content input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  transition: var(--main-duration);
+}
+.discount .form-holder .content input[type="submit"]:hover {
+  background-color: var(--main-color-alt);
+}
+/* End Discount */
 /* Start Animation */
 @keyframes up-and-down {
   from {
@@ -1366,6 +1467,14 @@ header .mega-menu ul.links li:last-of-type a {
     width: 200%;
     height: 200%;
     opacity: 0;
+  }
+}
+@keyframes change-background {
+  0%, 100% {
+    background-image: url(../images/discount-background1.jpg);
+  }
+  50% {
+    background-image: url(../images/discount-background2.jpg);
   }
 }
 /* End Animation */
